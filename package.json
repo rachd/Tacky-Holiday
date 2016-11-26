@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "underscore": "^1.8.3"
   }
 }
