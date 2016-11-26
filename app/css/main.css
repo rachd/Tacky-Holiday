@@ -1,0 +1,23 @@
+body {
+  height: 2000px;
+  background-image: url("../images/penguin-background-tile.gif"); }
+
+table {
+  width: 100%; }
+  table td {
+    text-align: center; }
+
+.stopModal {
+  display: none;
+  position: fixed;
+  top: 20px;
+  background-color: red;
+  color: white; }
+
+.modal-body {
+  height: 600px;
+  width: 800px;
+  background-color: red; }
+  .modal-body iframe {
+    width: 100%;
+    height: 100%; }
