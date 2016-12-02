@@ -1,6 +1,6 @@
 var count = 0,
 	showModal = true;
-var throttledModal = _.throttle(function(){
+var showModal = function(){
 	if ($('body').scrollTop() >= 100 && showModal) {
 		$('#myModal').modal();
 		count ++;
@@ -8,9 +8,9 @@ var throttledModal = _.throttle(function(){
 			$('.stopModal').css('display', 'block');
 		}
 	}
-}, 700);
+};
 
-$(window).scroll(throttledModal);
+$(window).scroll(showModal);
 
 $('.stopModal').click(function(){
 	if (showModal) {
@@ -20,4 +20,8 @@ $('.stopModal').click(function(){
 		showModal = true;
 		$('.stopModal').text('Stop The Modals!!!');
 	}
+});
+
+$(document).ready(function() {
+	showModal();
 });

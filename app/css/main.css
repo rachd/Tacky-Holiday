@@ -1,11 +1,22 @@
-body {
+.jokes {
+  background-image: url("../images/snow-background-tile.gif");
+  height: 150vh; }
+
+.home {
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
 
 table {
   width: 100%; }
   table td {
-    text-align: center; }
+    text-align: center;
+    border: 1px solid red;
+    padding: 20px; }
+
+button {
+  background-color: red;
+  color: green;
+  font-size: 20px; }
 
 .stopModal {
   display: none;

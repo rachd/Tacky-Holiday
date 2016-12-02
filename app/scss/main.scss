@@ -1,4 +1,6 @@
-body {
+@import 'jokes';
+
+.home {
 	height: 2000px;
 	background-image: url('../images/penguin-background-tile.gif');
 }
@@ -8,7 +10,15 @@ table {
 
 	td {
 		text-align: center;
+		border: 1px solid red;
+		padding: 20px;
 	}
+}
+
+button {
+	background-color: red;
+	color: green;
+	font-size: 20px;
 }
 
 .stopModal {
