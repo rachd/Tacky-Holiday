@@ -3,7 +3,8 @@
   height: 150vh; }
 
 #jokesTitle {
-  color: #1d7d23; }
+  color: #1d7d23;
+  margin: 0; }
 
 .home {
   height: 2000px;
@@ -13,7 +14,6 @@ table {
   width: 100%; }
   table td {
     text-align: center;
-    border: 1px solid red;
     padding: 20px; }
 
 button {
