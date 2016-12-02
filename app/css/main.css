@@ -2,6 +2,9 @@
   background-image: url("../images/snow-background-tile.gif");
   height: 150vh; }
 
+#jokesTitle {
+  color: #1d7d23; }
+
 .home {
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
