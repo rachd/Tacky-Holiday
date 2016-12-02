@@ -1,10 +1,13 @@
 .jokes {
   background-image: url("../images/snow-background-tile.gif");
   height: 150vh; }
-
-#jokesTitle {
-  color: #1d7d23;
-  margin: 0; }
+  .jokes #jokesTitle {
+    color: #1d7d23;
+    margin: 0; }
+  .jokes td {
+    border: 5px solid blue; }
+  .jokes .question {
+    font-weight: bold; }
 
 .home {
   height: 2000px;
