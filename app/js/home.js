@@ -23,5 +23,6 @@ $('.stopModal').click(function(){
 });
 
 $(document).ready(function() {
-	showModal();
+	$('#myModal').modal();
+	count ++;
 });

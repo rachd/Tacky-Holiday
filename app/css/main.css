@@ -13,6 +13,10 @@
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
 
+.visitors {
+  color: white;
+  background-color: red; }
+
 table {
   width: 100%; }
   table td {
