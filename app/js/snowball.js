@@ -21,13 +21,9 @@ var createSnowball = function() {
 		leftRight;
 	if (started) {
 		yPos = getRandomInt(0, $('body').height()); 
-		leftRight = getRandomInt(0, 2) * ($('body').width() - 40);
-		$('.snowball').append('<img style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">');
+		leftRight = getRandomInt(0, 2) * ($('body').width() - 50);
+		$('.snowball').append('<img data-side="' + leftRight + '" style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">');
 	}
-}
-
-var increaseSnowballs = function() {
-
 }
 
 var getRandomInt = function(min, max) {
@@ -38,10 +34,6 @@ var getRandomInt = function(min, max) {
 
 $(document).ready(function(){
 	moveMainSprite();
-	for (var i = 0; i < 4; i++) {
-		setTimeout(function(){
-			createSnowball();
-		}, timeOut);
-	}
+	var makeSnowballs = setInterval(createSnowball, timeOut);
 });
 
