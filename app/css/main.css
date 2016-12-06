@@ -9,6 +9,13 @@
   .jokes .question {
     font-weight: bold; }
 
+.snowball {
+  width: 100vw;
+  height: 100vh; }
+  .snowball #main-sprite {
+    width: 60px;
+    position: absolute; }
+
 .home {
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
