@@ -1,1 +1,14 @@
 //carols css
+
+.songs table td{
+	background-color: red;
+}
+.songTitle, .songLyrics {
+    background-color: rgba(255, 0, 0, 0.68);
+    color: #fff;
+    font-family: cursive;
+    border-radius: 20px;
+}
+.songs table td {
+    vertical-align: top;
+}
