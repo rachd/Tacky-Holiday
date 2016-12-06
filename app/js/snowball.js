@@ -18,19 +18,6 @@ Snowball.prototype.slide = function(){
 	}
 };
 
-$mainSprite.on('click', function(event) {
-	started = true;
-});
-
-var moveMainSprite = function() {
-	$('.snowball').on('mousemove', function( event ) {
-		if (started) {
-			$mainSprite.css('left', event.pageX - 30);
-			$mainSprite.css('top', event.pageY - 50);
-		}
-	});
-};
-
 var createSnowball = function() {
 	var yPos,
 		leftRight;
@@ -45,6 +32,47 @@ var createSnowball = function() {
 	}
 }
 
+var makeSnowballs = setInterval(createSnowball, timeOut);
+
+var youLose = function() {
+	playing = false;
+	clearInterval(makeSnowballs);
+	$('.snowball-sprite').remove();
+	alert('You lose!');
+}
+
+var moveMainSprite = function() {
+	$('.snowball').on('mousemove', function( event ) {
+		if (started) {
+			$mainSprite.css('left', event.pageX - 30);
+			$mainSprite.css('top', event.pageY - 50);
+			if(allElementsFromPoint(event.pageX, event.pageY).length > 3) {
+				youLose();
+				return;
+			}
+		}
+	});
+};
+
+var allElementsFromPoint = function allElementsFromPoint(x, y) {
+    var element, elements = [];
+    var old_visibility = [];
+    while (true) {
+        element = document.elementFromPoint(x, y);
+        if (!element || element === document.documentElement) {
+            break;
+        }
+        elements.push(element);
+        old_visibility.push(element.style.visibility);
+        element.style.visibility = 'hidden'; // Temporarily hide the element (without changing the layout)
+    }
+    for (var k = 0; k < elements.length; k++) {
+        elements[k].style.visibility = old_visibility[k];
+    }
+    elements.reverse();
+    return elements;
+};
+
 var getRandomInt = function(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -53,7 +81,9 @@ var getRandomInt = function(min, max) {
 
 $(document).ready(function(){
 	moveMainSprite();
-	var makeSnowballs = setInterval(createSnowball, timeOut);
+});
 
+$mainSprite.on('click', function(event) {
+	started = true;
 });
 
