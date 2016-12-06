@@ -3,16 +3,31 @@ var $mainSprite = $('#main-sprite'),
 	playing = true,
 	timeOut = 2000;
 
+var Snowball = function Snowball(leftRight, yPos){
+	this.leftRight = leftRight;
+    this.$div = $('<img data-side="' + leftRight + '" style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">').appendTo('.snowball');
+};
+
+Snowball.prototype.slide = function(){
+	if (this.leftRight === 0) {
+		var ball = this.$div;
+		var fullwidth = $('.snowball').width();
+		ball.animate({left: fullwidth}, 5000);
+	} else {
+    	this.$div.animate({left: '-100px'}, 5000);
+	}
+};
+
+$mainSprite.on('click', function(event) {
+	started = true;
+});
+
 var moveMainSprite = function() {
 	$('.snowball').on('mousemove', function( event ) {
 		if (started) {
 			$mainSprite.css('left', event.pageX - 30);
 			$mainSprite.css('top', event.pageY - 50);
 		}
-	});
-
-	$mainSprite.on('click', function(event) {
-		started = true;
 	});
 };
 
@@ -21,8 +36,9 @@ var createSnowball = function() {
 		leftRight;
 	if (started) {
 		yPos = getRandomInt(0, $('body').height()); 
-		leftRight = getRandomInt(0, 2) * ($('body').width() - 50);
-		$('.snowball').append('<img data-side="' + leftRight + '" style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">');
+		leftRight = getRandomInt(0, 2) * ($('body').width() - 60);
+		var snow = new Snowball(leftRight, yPos);
+        snow.slide();
 	}
 }
 
@@ -35,5 +51,6 @@ var getRandomInt = function(min, max) {
 $(document).ready(function(){
 	moveMainSprite();
 	var makeSnowballs = setInterval(createSnowball, timeOut);
+
 });
 
