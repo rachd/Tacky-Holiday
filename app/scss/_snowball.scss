@@ -5,5 +5,7 @@
 	#main-sprite {
 		width: 60px;
 		position: absolute;
+		left: calc(50vw - 20px);
+		top: calc(50vh - 50px);
 	}
 }

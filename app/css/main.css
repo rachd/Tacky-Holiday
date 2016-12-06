@@ -14,7 +14,9 @@
   height: 100vh; }
   .snowball #main-sprite {
     width: 60px;
-    position: absolute; }
+    position: absolute;
+    left: calc(50vw - 20px);
+    top: calc(50vh - 50px); }
 
 .home {
   height: 2000px;
