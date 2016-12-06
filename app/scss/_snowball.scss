@@ -1,6 +1,7 @@
 .snowball {
 	width: 100vw;
 	height: 100vh;
+	text-align: center;
 
 	#main-sprite {
 		width: 60px;
@@ -12,5 +13,18 @@
 	.snowball-sprite {
 		width: 40px;
 		height: 40px;
+	}
+
+	.snow-splat {
+		height: 100vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.lostMessage {
+		position: absolute;
+    	top: 45%;
+    	text-align: center;
+    	width: 100%;
 	}
 }

@@ -1,11 +1,10 @@
 var $mainSprite = $('#main-sprite'),
 	started = false,
-	playing = true,
 	timeOut = 500;
 
 var Snowball = function Snowball(leftRight, yPos){
 	this.leftRight = leftRight;
-    this.$div = $('<img data-side="' + leftRight + '" style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">').appendTo('.snowball');
+    this.$div = $('<img style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">').appendTo('.snowball');
 };
 
 Snowball.prototype.slide = function(){
@@ -35,10 +34,14 @@ var createSnowball = function() {
 var makeSnowballs = setInterval(createSnowball, timeOut);
 
 var youLose = function() {
-	playing = false;
+	started = false;
 	clearInterval(makeSnowballs);
 	$('.snowball-sprite').remove();
-	alert('You lose!');
+	$mainSprite.remove();
+	$mainSprite.css('left', 'calc(50vw - 20px');
+	$mainSprite.css('top', 'calc(50vh - 50px)');
+	$('.snowball').append('<img class="snow-splat" src="images/snow_splat.png">');
+	$('.snowball').append('<h1 class="lostMessage">You Lose! Refresh to play again.</h1>');
 }
 
 var moveMainSprite = function() {
