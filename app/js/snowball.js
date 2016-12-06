@@ -1,5 +1,7 @@
 var $mainSprite = $('#main-sprite'),
-	started = false;
+	started = false,
+	playing = true,
+	timeOut = 2000;
 
 var moveMainSprite = function() {
 	$('.snowball').on('mousemove', function( event ) {
@@ -14,7 +16,32 @@ var moveMainSprite = function() {
 	});
 };
 
+var createSnowball = function() {
+	var yPos,
+		leftRight;
+	if (started) {
+		yPos = getRandomInt(0, $('body').height()); 
+		leftRight = getRandomInt(0, 2) * ($('body').width() - 40);
+		$('.snowball').append('<img style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">');
+	}
+}
+
+var increaseSnowballs = function() {
+
+}
+
+var getRandomInt = function(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 $(document).ready(function(){
 	moveMainSprite();
+	for (var i = 0; i < 4; i++) {
+		setTimeout(function(){
+			createSnowball();
+		}, timeOut);
+	}
 });
 
