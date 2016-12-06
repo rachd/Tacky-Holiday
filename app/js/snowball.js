@@ -88,5 +88,6 @@ $(document).ready(function(){
 
 $mainSprite.on('click', function(event) {
 	started = true;
+	$('.directions').css('display', 'none');
 });
 

@@ -12,7 +12,8 @@
 .snowball {
   width: 100vw;
   height: 100vh;
-  text-align: center; }
+  text-align: center;
+  background-image: url("../images/snow-background-tile.gif"); }
   .snowball #main-sprite {
     width: 60px;
     position: absolute;
