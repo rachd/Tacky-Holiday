@@ -1,7 +1,7 @@
 var $mainSprite = $('#main-sprite'),
 	started = false,
 	playing = true,
-	timeOut = 2000;
+	timeOut = 500;
 
 var Snowball = function Snowball(leftRight, yPos){
 	this.leftRight = leftRight;
@@ -35,10 +35,13 @@ var createSnowball = function() {
 	var yPos,
 		leftRight;
 	if (started) {
-		yPos = getRandomInt(0, $('body').height()); 
-		leftRight = getRandomInt(0, 2) * ($('body').width() - 60);
-		var snow = new Snowball(leftRight, yPos);
-        snow.slide();
+		for (var i = 0; i < 1; i++) {
+			yPos = getRandomInt(0, $('body').height() - 40); 
+			leftRight = getRandomInt(0, 2) * ($('body').width() - 60);
+			var snow = new Snowball(leftRight, yPos);
+        	snow.slide();
+		}
+        timeOut -= 50;
 	}
 }
 
