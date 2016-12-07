@@ -9,6 +9,73 @@
   .jokes .question {
     font-weight: bold; }
 
+body {
+  overflow-x: hidden;
+  background-image: url("../images/christmas-random.jpg"); }
+
+.lights {
+  position: fixed; }
+
+#lights1 {
+  width: 128%;
+  left: -100px;
+  top: -68px; }
+
+#lights2 {
+  height: 120%;
+  top: -100px;
+  left: -50px; }
+
+#lights3 {
+  height: 120%;
+  top: 28px;
+  left: -81px;
+  transform: rotate(180deg); }
+
+#lights4 {
+  height: 120%;
+  right: -81px;
+  top: -41px;
+  transform: rotate(180deg); }
+
+#lights5 {
+  height: 120%;
+  right: -109px;
+  top: -50px;
+  transform: scaleX(-1); }
+
+h1.songsHeader {
+  text-align: center;
+  color: #e6da24;
+  padding: 28px;
+  font-size: 100px;
+  font-family: cursive;
+  background-image: url(../images/holly-tile.gif);
+  width: 59%;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 100px; }
+
+.songs table {
+  width: 90%;
+  margin-left: 56px;
+  margin-top: 0; }
+
+.songTitle, .songLyrics {
+  border-radius: 23px;
+  padding: 10px;
+  color: #fff;
+  font-family: fantasy; }
+
+.songs table td {
+  vertical-align: top; }
+
+.odd {
+  background-color: rgba(0, 239, 0, 0.44); }
+
+.even {
+  background-color: rgba(255, 16, 16, 0.44); }
+
 .home {
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
