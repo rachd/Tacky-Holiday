@@ -1,17 +1,17 @@
-var moveTitle = function() {
-	var title = $('#jokesTitle')
-		color = title.css('color') == 'rgb(29, 125, 35)' ? 'rgb(255, 0, 0)' : 'rgb(29, 125, 35)';
-	title.css('color', color);
-	setTimeout(function() {
-		moveTitle();
-	}, 400);
-}
+// var moveTitle = function() {
+// 	var title = $('#jokesTitle')
+// 		color = title.css('color') == 'rgb(29, 125, 35)' ? 'rgb(255, 0, 0)' : 'rgb(29, 125, 35)';
+// 	title.css('color', color);
+// 	setTimeout(function() {
+// 		moveTitle();
+// 	}, 400);
+// }
 
-$(document).ready(function() {
-	setTimeout(function() {
-		moveTitle();
-	}, 800);
-});
+// $(document).ready(function() {
+// 	setTimeout(function() {
+// 		moveTitle();
+// 	}, 800);
+// });
 
 var Jokes = function(question, answer, backgroundImg){
 	this.question = question;
@@ -31,7 +31,7 @@ var joke5 = new Jokes("Q: What is Claustrophobia?","A: The fear of Santa Claus",
 
 var joke6 = new Jokes("Q: What breakfast ceareal does Frosty the Snowman eat?","A: Snowflakes", "url('images/joke-bg6.png') ");
 
-var joke7 = new Jokes("Q: What do you call a cat sitting on the beach on Christmas Eve?","A: Sandy Claws", "url('images/joke-bg7.png') ");
+var joke7 = new Jokes("Q: What do you call a cat sitting on the beach on Christmas Eve?","A: Sandy Claws", "url('images/joke-bg7.jpg') ");
 
 var joke8 = new Jokes("Q: Where does the snowman hide his money?","A: In the snow bank", "url('images/joke-bg8.gif') ");
 
