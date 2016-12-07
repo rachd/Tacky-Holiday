@@ -15,3 +15,24 @@
 		font-weight: bold;
 	}
 }
+ 
+.rowOne {
+    background-color: red;
+    padding: 10px;
+    width: 53%;
+    margin: auto;
+    border-radius: 50px;
+    color: #fff;
+}
+.joke {
+    padding-top: 10vh;
+    width: 75%;
+    margin: auto;
+}
+#questionDisplay {
+    font-size: 75px;
+}
+
+#answerDisplay{
+    font-size: 30px;
+}

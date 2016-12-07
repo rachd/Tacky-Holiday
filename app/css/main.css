@@ -9,7 +9,25 @@
   .jokes .question {
     font-weight: bold; }
 
-<<<<<<< HEAD
+.rowOne {
+  background-color: red;
+  padding: 10px;
+  width: 53%;
+  margin: auto;
+  border-radius: 50px;
+  color: #fff; }
+
+.joke {
+  padding-top: 10vh;
+  width: 75%;
+  margin: auto; }
+
+#questionDisplay {
+  font-size: 75px; }
+
+#answerDisplay {
+  font-size: 30px; }
+
 .snowball {
   width: 100vw;
   height: 100vh;
@@ -32,10 +50,10 @@
     top: 45%;
     text-align: center;
     width: 100%; }
-=======
+
 body {
   overflow-x: hidden;
-  background-image: url("../images/christmas-random.jpg"); }
+  background-image: url("../images/winter-clothes-kid.jpg"); }
 
 .lights {
   position: fixed; }
@@ -99,7 +117,6 @@ h1.songsHeader {
 
 .even {
   background-color: rgba(255, 16, 16, 0.44); }
->>>>>>> feature/carolspage
 
 .home {
   height: 2000px;
