@@ -9,6 +9,29 @@
   .jokes .question {
     font-weight: bold; }
 
+.snowball {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-image: url("../images/snow-background-tile.gif"); }
+  .snowball #main-sprite {
+    width: 60px;
+    position: absolute;
+    left: calc(50vw - 20px);
+    top: calc(50vh - 50px); }
+  .snowball .snowball-sprite {
+    width: 40px;
+    height: 40px; }
+  .snowball .snow-splat {
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto; }
+  .snowball .lostMessage {
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    width: 100%; }
+
 .home {
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
