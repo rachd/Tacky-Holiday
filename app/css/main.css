@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 .jokes {
   background-image: url("../images/snow-background-tile.gif");
   text-align: center;
@@ -150,6 +152,7 @@ h1.songsHeader {
 .even {
   background-color: rgba(255, 16, 16, 0.44); }
 
+>>>>>>> master
 .home {
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
@@ -183,3 +186,37 @@ button {
   .modal-body iframe {
     width: 100%;
     height: 100%; }
+
+.jokes {
+  background-image: url("../images/snow-background-tile.gif");
+  height: 150vh; }
+  .jokes #jokesTitle {
+    color: #1d7d23;
+    margin: 0; }
+  .jokes td {
+    border: 5px solid blue; }
+  .jokes .question {
+    font-weight: bold; }
+
+.snowball {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-image: url("../images/snow-background-tile.gif"); }
+  .snowball #main-sprite {
+    width: 60px;
+    position: absolute;
+    left: calc(50vw - 20px);
+    top: calc(50vh - 50px); }
+  .snowball .snowball-sprite {
+    width: 40px;
+    height: 40px; }
+  .snowball .snow-splat {
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto; }
+  .snowball .lostMessage {
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    width: 100%; }
