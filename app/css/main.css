@@ -1,8 +1,9 @@
 .jokes {
   background-image: url("../images/snow-background-tile.gif");
-  height: 150vh;
   text-align: center;
-  position: relative; }
+  position: relative;
+  max-height: 100vh;
+  overflow: hidden; }
 
 .rowOne {
   background-color: red;
@@ -10,18 +11,54 @@
   width: 53%;
   margin: auto;
   border-radius: 50px;
-  color: #fff; }
+  color: #fff;
+  font-family: 'Fontdiner Swanky', cursive; }
 
 .joke {
-  padding-top: 10vh;
   width: 75%;
-  margin: auto; }
+  margin: auto;
+  font-family: 'Kranky', sans serif; }
 
 #questionDisplay {
-  font-size: 75px; }
+  font-size: 75px;
+  background-color: rgba(58, 208, 58, 0.7);
+  color: rgba(255, 0, 0, 0.92);
+  border-radius: 56px;
+  line-height: 63px;
+  padding: 50px; }
 
-#answerDisplay {
-  font-size: 30px; }
+h3#answerDisplay {
+  font-size: 30px;
+  color: #fff;
+  width: 65%;
+  margin: auto;
+  padding: 10px 0;
+  border: 8px dashed; }
+
+p.credit {
+  font-size: 11px; }
+
+blink {
+  -webkit-animation: blink 1s steps(2, start) infinite;
+  -moz-animation: blink 1s steps(2, start) infinite;
+  -o-animation: blink 1s steps(2, start) infinite;
+  animation: blink 1s steps(2, start) infinite; }
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden; } }
+
+@-moz-keyframes blink {
+  to {
+    visibility: hidden; } }
+
+@-o-keyframes blink {
+  to {
+    visibility: hidden; } }
+
+@keyframes blink {
+  to {
+    visibility: hidden; } }
 
 .snowball {
   width: 100vw;

@@ -1,17 +1,4 @@
-// var moveTitle = function() {
-// 	var title = $('#jokesTitle')
-// 		color = title.css('color') == 'rgb(29, 125, 35)' ? 'rgb(255, 0, 0)' : 'rgb(29, 125, 35)';
-// 	title.css('color', color);
-// 	setTimeout(function() {
-// 		moveTitle();
-// 	}, 400);
-// }
 
-// $(document).ready(function() {
-// 	setTimeout(function() {
-// 		moveTitle();
-// 	}, 800);
-// });
 
 var Jokes = function(question, answer, backgroundImg){
 	this.question = question;
@@ -48,4 +35,19 @@ function newJoke(){
 	document.getElementById('questionDisplay').innerHTML = jokeList[randomNumber].question;
 	document.getElementById('answerDisplay').innerHTML = jokeList[randomNumber].answer;
 	document.body.style.background = jokeList[randomNumber].backgroundImg;
+};
+
+var moveTitle = function() {
+	var title = $('#jokesTitle')
+		color = title.css('color') == 'rgb(29, 125, 35)' ? 'rgb(255, 0, 0)' : 'rgb(29, 125, 35)';
+	title.css('color', color);
+	setTimeout(function() {
+		moveTitle();
+	}, 400);
 }
+
+$(document).ready(function() {
+	setTimeout(function() {
+		moveTitle();
+	}, 800);
+});
