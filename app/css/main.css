@@ -9,6 +9,18 @@
   .jokes .question {
     font-weight: bold; }
 
+.songs table td {
+  background-color: red; }
+
+.songTitle, .songLyrics {
+  background-color: rgba(255, 0, 0, 0.68);
+  color: #fff;
+  font-family: cursive;
+  border-radius: 20px; }
+
+.songs table td {
+  vertical-align: top; }
+
 .home {
   height: 2000px;
   background-image: url("../images/penguin-background-tile.gif"); }
