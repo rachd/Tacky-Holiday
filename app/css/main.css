@@ -116,6 +116,15 @@ blink {
     text-align: center;
     width: 100%; }
 
+.songs table td {
+  background-color: red; }
+
+.songTitle, .songLyrics {
+  background-color: rgba(255, 0, 0, 0.68);
+  color: #fff;
+  font-family: cursive;
+  border-radius: 20px; }
+
 body {
   overflow-x: hidden;
   background-image: url("../images/winter-clothes-kid.jpg"); }
