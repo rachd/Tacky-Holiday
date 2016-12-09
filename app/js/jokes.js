@@ -35,8 +35,8 @@ function newJoke(){
 	document.getElementById('questionDisplay').innerHTML = jokeList[randomNumber].question;
 	document.getElementById('answerDisplay').innerHTML = jokeList[randomNumber].answer;
 	document.body.style.background = jokeList[randomNumber].backgroundImg;
-	document.getElementById("questionDisplay").style.backgroundColor = "rgba(58, 208, 58, 0.7)";
-	document.getElementById("answerDisplay").style.backgroundColor = "red";
+	document.getElementById('questionDisplay').style.backgroundColor = "rgba(58, 208, 58, 0.7)";
+	document.getElementById('answerDisplay').style.backgroundColor = "red";
 };
 
 // var moveTitle = function() {
