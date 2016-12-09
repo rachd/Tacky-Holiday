@@ -35,19 +35,22 @@ function newJoke(){
 	document.getElementById('questionDisplay').innerHTML = jokeList[randomNumber].question;
 	document.getElementById('answerDisplay').innerHTML = jokeList[randomNumber].answer;
 	document.body.style.background = jokeList[randomNumber].backgroundImg;
+	document.getElementById("questionDisplay").style.backgroundColor = "rgba(58, 208, 58, 0.7)";
+	document.getElementById("answerDisplay").style.backgroundColor = "red";
 };
 
-var moveTitle = function() {
-	var title = $('#jokesTitle')
-		color = title.css('color') == 'rgb(29, 125, 35)' ? 'rgb(255, 0, 0)' : 'rgb(29, 125, 35)';
-	title.css('color', color);
-	setTimeout(function() {
-		moveTitle();
-	}, 400);
-}
+// var moveTitle = function() {
+// 	var title = $('#jokesTitle')
+// 		color = title.css('color') == 'rgb(29, 125, 35)' ? 'rgb(255, 0, 0)' : 'rgb(29, 125, 35)';
+// 	title.css('color', color);
+// 	setTimeout(function() {
+// 		moveTitle();
+// 	}, 400);
+// }
 
-$(document).ready(function() {
-	setTimeout(function() {
-		moveTitle();
-	}, 800);
-});
+// $(document).ready(function() {
+// 	setTimeout(function() {
+// 		moveTitle();
+// 	}, 800);
+// });
+
