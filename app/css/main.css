@@ -1,13 +1,121 @@
+.home {
+  height: 2000px;
+  background-image: url("../images/penguin-background-tile.gif"); }
+
+.visitors {
+  color: white;
+  background-color: red; }
+
+table {
+  width: 100%; }
+  table td {
+    text-align: center;
+    padding: 20px; }
+
+button {
+  background-color: red;
+  color: green;
+  font-size: 20px; }
+
+.stopModal {
+  display: none;
+  position: fixed;
+  top: 20px;
+  background-color: red;
+  color: white; }
+
+.modal-body {
+  height: 600px;
+  width: 800px;
+  background-color: red; }
+  .modal-body iframe {
+    width: 100%;
+    height: 100%; }
+
 .jokes {
   background-image: url("../images/snow-background-tile.gif");
-  height: 150vh; }
-  .jokes #jokesTitle {
-    color: #1d7d23;
-    margin: 0; }
-  .jokes td {
-    border: 5px solid blue; }
-  .jokes .question {
-    font-weight: bold; }
+  text-align: center;
+  position: relative;
+  max-height: 100vh;
+  overflow: hidden; }
+
+.rowOne {
+  background-color: red;
+  padding: 10px;
+  width: 53%;
+  margin: auto;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Fontdiner Swanky', cursive; }
+
+.joke {
+  width: 75%;
+  margin: auto;
+  font-family: 'Kranky', sans serif; }
+
+#questionDisplay {
+  font-size: 75px;
+  background-color: rgba(58, 208, 58, 0.7);
+  color: rgba(255, 0, 0, 0.92);
+  border-radius: 56px;
+  line-height: 63px;
+  padding: 50px; }
+
+h3#answerDisplay {
+  font-size: 30px;
+  color: #fff;
+  width: 65%;
+  margin: auto;
+  padding: 10px 0;
+  border: 8px dashed; }
+
+p.credit {
+  font-size: 11px; }
+
+blink {
+  -webkit-animation: blink 1s steps(2, start) infinite;
+  -moz-animation: blink 1s steps(2, start) infinite;
+  -o-animation: blink 1s steps(2, start) infinite;
+  animation: blink 1s steps(2, start) infinite; }
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden; } }
+
+@-moz-keyframes blink {
+  to {
+    visibility: hidden; } }
+
+@-o-keyframes blink {
+  to {
+    visibility: hidden; } }
+
+@keyframes blink {
+  to {
+    visibility: hidden; } }
+
+.snowball {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-image: url("../images/snow-background-tile.gif"); }
+  .snowball #main-sprite {
+    width: 60px;
+    position: absolute;
+    left: calc(50vw - 20px);
+    top: calc(50vh - 50px); }
+  .snowball .snowball-sprite {
+    width: 40px;
+    height: 40px; }
+  .snowball .snow-splat {
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto; }
+  .snowball .lostMessage {
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    width: 100%; }
 
 .songs table td {
   background-color: red; }
@@ -20,7 +128,7 @@
 
 body {
   overflow-x: hidden;
-  background-image: url("../images/christmas-random.jpg"); }
+  background-image: url("../images/winter-clothes-kid.jpg"); }
 
 .lights {
   position: fixed; }
