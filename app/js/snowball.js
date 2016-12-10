@@ -1,6 +1,7 @@
 var $mainSprite = $('#main-sprite'),
 	started = false,
-	timeOut = 500;
+	timeOut = 500,
+	numSnow = 1;
 
 var collisionCheck;
 
@@ -23,13 +24,13 @@ var createSnowball = function() {
 	var yPos,
 		leftRight;
 	if (started) {
-		for (var i = 0; i < 1; i++) {
+		for (var i = 0; i < Math.floor(numSnow); i++) {
 			yPos = getRandomInt(0, $('body').height() - 40); 
 			leftRight = getRandomInt(0, 2) * ($('body').width() - 60);
 			var snow = new Snowball(leftRight, yPos);
         	snow.slide();
 		}
-        timeOut -= 50;
+        numSnow += 0.1;
 	}
 }
 
