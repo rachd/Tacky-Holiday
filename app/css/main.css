@@ -1,5 +1,5 @@
 .home {
-  height: 2000px;
+  width: 111 vw;
   background-image: url("../images/penguin-background-tile.gif"); }
 
 .visitors {
@@ -16,6 +16,17 @@ button {
   background-color: red;
   color: green;
   font-size: 20px; }
+
+.home-gifs {
+  margin: auto;
+  width: 90%;
+  text-align: center; }
+
+.home-gifs img {
+  height: 200px; }
+
+img#height {
+  height: 100px; }
 
 .stopModal {
   display: none;
@@ -118,7 +129,7 @@ blink {
 
 .songs {
   overflow-x: hidden;
-  background-image: url("../images/winter-clothes-kid.jpg"); }
+  background-image: url(../images/christmas-random.jpg); }
 
 .lights {
   position: fixed; }

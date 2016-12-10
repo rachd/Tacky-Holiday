@@ -1,5 +1,5 @@
 .home {
-	height: 2000px;
+	width: 111 vw;
 	background-image: url('../images/penguin-background-tile.gif');
 }
 
@@ -9,7 +9,7 @@
 }
 
 table {
-	width: 100%;
+width: 100%;
 
 	td {
 		text-align: center;
@@ -21,6 +21,18 @@ button {
 	background-color: red;
 	color: green;
 	font-size: 20px;
+}
+.home-gifs {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+
+.home-gifs img {
+    height: 200px;
+}
+img#height {
+    height: 100px;
 }
 
 .stopModal {
