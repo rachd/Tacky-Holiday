@@ -1,6 +1,6 @@
 //carols css
 
-body{
+.songs {
 	overflow-x:hidden;
 	background-image: url('../images/winter-clothes-kid.jpg');
 }
@@ -56,6 +56,7 @@ h1.songsHeader {
     width: 90%;
     margin-left: 56px;
     margin-top: 0;
+    background-image: url(../images/christmas-random.jpg);
 }
 
 .songTitle, .songLyrics {
