@@ -116,16 +116,7 @@ blink {
     text-align: center;
     width: 100%; }
 
-.songs table td {
-  background-color: red; }
-
-.songTitle, .songLyrics {
-  background-color: rgba(255, 0, 0, 0.68);
-  color: #fff;
-  font-family: cursive;
-  border-radius: 20px; }
-
-body {
+.songs {
   overflow-x: hidden;
   background-image: url("../images/winter-clothes-kid.jpg"); }
 
@@ -175,7 +166,8 @@ h1.songsHeader {
 .songs table {
   width: 90%;
   margin-left: 56px;
-  margin-top: 0; }
+  margin-top: 0;
+  background-image: url(../images/christmas-random.jpg); }
 
 .songTitle, .songLyrics {
   border-radius: 23px;
