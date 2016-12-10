@@ -37,6 +37,8 @@ var createSnowball = function() {
 var makeSnowballs = setInterval(createSnowball, timeOut);
 
 var youLose = function() {
+	var audio = new Audio('audio/goat-scream.mp3');
+	audio.play();
 	started = false;
 	clearInterval(makeSnowballs);
 	clearInterval(collisionCheck);
