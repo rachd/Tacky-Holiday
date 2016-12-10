@@ -1,4 +1,5 @@
 .home {
+  width: 111 vw;
   background-image: url("../images/penguin-background-tile.gif"); }
 
 .visitors {
@@ -15,6 +16,17 @@ button {
   background-color: red;
   color: green;
   font-size: 20px; }
+
+.home-gifs {
+  margin: auto;
+  width: 90%;
+  text-align: center; }
+
+.home-gifs img {
+  height: 200px; }
+
+img#height {
+  height: 100px; }
 
 .stopModal {
   display: none;
