@@ -1,7 +1,8 @@
 var $mainSprite = $('#main-sprite'),
 	started = false,
 	timeOut = 500,
-	numSnow = 1;
+	numSnow = 1,
+	timeinterval;
 
 var collisionCheck;
 
@@ -42,6 +43,7 @@ var youLose = function() {
 	started = false;
 	clearInterval(makeSnowballs);
 	clearInterval(collisionCheck);
+	clearInterval(timeinterval);
 	$('.snowball-sprite').remove();
 	$mainSprite.remove();
 	$mainSprite.css('left', 'calc(50vw - 20px');
@@ -104,8 +106,49 @@ var checkForCollision = function() {
 $mainSprite.on('click', function(event) {
 	started = true;
 	$('.directions').css('display', 'none');
+	$('#clockdiv').css('display', 'block');
+	initializeClock('clockdiv');
+
 	collisionCheck = setInterval(function(){
 	    checkForCollision();
-	}, 200);
+	}, 50);
 });
+
+/*
+=================
+Countdown Clock
+=================
+*/
+var timeElapsed = -1000;
+
+function getTimeRemaining(t){
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id){
+	var clock = document.getElementById(id);
+	var hoursSpan = clock.querySelector('.hours');
+	var minutesSpan = clock.querySelector('.minutes');
+	var secondsSpan = clock.querySelector('.seconds');
+    function updateClock(){
+    	timeElapsed += 1000;
+	    var t = getTimeRemaining(timeElapsed);
+	    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+	    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+	    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+	}
+
+	updateClock(); // run function once at first to avoid delay
+	timeinterval = setInterval(updateClock,1000);
+}
 

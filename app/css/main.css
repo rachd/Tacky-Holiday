@@ -127,6 +127,11 @@ blink {
     top: 45%;
     text-align: center;
     width: 100%; }
+  .snowball #clockdiv {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none; }
 
 .songs {
   overflow-x: hidden;
