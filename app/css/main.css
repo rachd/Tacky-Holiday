@@ -127,7 +127,7 @@ blink {
     text-align: center;
     width: 100%; }
 
-body {
+.songs {
   overflow-x: hidden;
   background-image: url("../images/winter-clothes-kid.jpg"); }
 
@@ -177,7 +177,8 @@ h1.songsHeader {
 .songs table {
   width: 90%;
   margin-left: 56px;
-  margin-top: 0; }
+  margin-top: 0;
+  background-image: url(../images/christmas-random.jpg); }
 
 .songTitle, .songLyrics {
   border-radius: 23px;
