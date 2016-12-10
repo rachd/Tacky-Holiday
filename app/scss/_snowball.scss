@@ -3,6 +3,7 @@
 	height: 100vh;
 	text-align: center;
 	background-image: url('../images/snow-background-tile.gif');
+	font-family: "Comic Sans MS";
 
 	#main-sprite {
 		width: 60px;
@@ -27,5 +28,12 @@
     	top: 45%;
     	text-align: center;
     	width: 100%;
+	}
+
+	#clockdiv {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: none;
 	}
 }
