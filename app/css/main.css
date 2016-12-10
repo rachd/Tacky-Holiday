@@ -108,7 +108,8 @@ blink {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  background-image: url("../images/snow-background-tile.gif"); }
+  background-image: url("../images/snow-background-tile.gif");
+  font-family: "Comic Sans MS"; }
   .snowball #main-sprite {
     width: 60px;
     position: absolute;
