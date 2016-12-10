@@ -2,6 +2,8 @@ var $mainSprite = $('#main-sprite'),
 	started = false,
 	timeOut = 500;
 
+var collisionCheck;
+
 var Snowball = function Snowball(leftRight, yPos){
 	this.leftRight = leftRight;
     this.$div = $('<img style="position: absolute; left: ' + leftRight + 'px; top: ' + yPos + 'px" class="snowball-sprite" src="images/Snowball.png">').appendTo('.snowball');
@@ -36,6 +38,7 @@ var makeSnowballs = setInterval(createSnowball, timeOut);
 var youLose = function() {
 	started = false;
 	clearInterval(makeSnowballs);
+	clearInterval(collisionCheck);
 	$('.snowball-sprite').remove();
 	$mainSprite.remove();
 	$mainSprite.css('left', 'calc(50vw - 20px');
@@ -49,10 +52,6 @@ var moveMainSprite = function() {
 		if (started) {
 			$mainSprite.css('left', event.pageX - 30);
 			$mainSprite.css('top', event.pageY - 50);
-			if(allElementsFromPoint(event.pageX, event.pageY).length > 3) {
-				youLose();
-				return;
-			}
 		}
 	});
 };
@@ -86,8 +85,24 @@ $(document).ready(function(){
 	moveMainSprite();
 });
 
+var checkForCollision = function() {
+	var rect2 = document.getElementById('main-sprite').getBoundingClientRect(),
+		snowBalls = document.getElementsByClassName('snowball-sprite'),
+		rect1;
+	for (var i = 0; i < snowBalls.length; i++) {
+		rect1 = snowBalls[i].getBoundingClientRect();
+		if (!(rect1.right < rect2.left || rect1.left > rect2.right || rect1.bottom < rect2.top || rect1.top > rect2.bottom)) {
+			youLose();
+			return;
+		}
+	}
+}
+
 $mainSprite.on('click', function(event) {
 	started = true;
 	$('.directions').css('display', 'none');
+	collisionCheck = setInterval(function(){
+	    checkForCollision();
+	}, 200);
 });
 
