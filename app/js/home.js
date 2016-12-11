@@ -24,6 +24,9 @@ $('.stopModal').click(function(){
 });
 
 $(document).ready(function() {
+	if (!($('html').is('.lt-ie8'))) {
+		alert("Hi, we noticed that you are using one of those new-fangled browsers. We recommend using a tried-and-true browser such as Internet Explorer 7 instead.");
+	}
 	$('#myModal').modal();
 	count ++;
 });
