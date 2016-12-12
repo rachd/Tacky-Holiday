@@ -13,6 +13,17 @@ var showModal = function() {
 
 $(window).scroll(showModal);
 
+var turnModalsOn = function() {
+	if (!showModal) {
+		alert('Due to your continued stay on our website, we turned the modals back on.')
+		showModal = true;
+		$('#myModal').modal();
+		$('.stopModal').text('Stop The Modals!!!');
+	}
+}
+
+var modalTimeout = window.setInterval(turnModalsOn, 7000);
+
 $('.stopModal').click(function(){
 	if (showModal) {
 		showModal = false;
